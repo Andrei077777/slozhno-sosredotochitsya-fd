@@ -2,3 +2,13 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  --button-decorated-color:#ff0070;
+  --button-decorated-color-semi: #ff007066;
+  --accent-color: #ff0070;
+  --header-color: #DB00FF;
+  --card-text-color: #000028;
+  --section-text-color: #F1B2CE;
+  --main-card-text-color:#ff0070;
+  --bg-image:url(../images/cover-image-dark.png);
+}
