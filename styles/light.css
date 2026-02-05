@@ -21,3 +21,18 @@
   --rec-visibility:hidden;
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+  --bg-image:url(../images/cover-image-light.png);
+  --button-decorated-color:#353430;
+  --button-decorated-color-semi: #35343066;
+  --accent-color: #FF8DCB;
+  --accent-color-text: #353430;
+  --header-color:#FFC2E6;
+  --main-card-text-color: #353430;
+  --section-text-color: #353430;
+  --accent-color-semi: #ff007066;
+  --rec-visibility:hidden;
+  }
+}
+
