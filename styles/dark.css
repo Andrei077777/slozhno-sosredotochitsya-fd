@@ -1,5 +1,8 @@
 :root.theme-dark {
-  --bg-img: url(../images/cover-image-dark.png);
+  --bg-color: #000028;
+  --bg-image: url(../images/cover-image-dark.png);
+  --button-decorated-color: #ff0070;
+  --main-card-text-color: #ff0070;
   --accent-color: #ff0070;
   --header-color: #db00ff;
   --card-text-color: #000028;
@@ -9,8 +12,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --bg-color: #000028;
     --section-text-color: #f1b2ce;
-    --bg-img: url(../images/cover-image-dark.png);
+    --bg-image: url(../images/cover-image-dark.png);
+    --button-decorated-color: #ff0070;
+    --main-card-text-color: #ff0070;
     --accent-color: #ff0070;
     --accent-color-semi-transparent: #ff007066;
     --title-color: #db00ff;

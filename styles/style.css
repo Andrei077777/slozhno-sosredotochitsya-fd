@@ -6,7 +6,7 @@
   gap: 30px;
   place-items: center;
   background-attachment: fixed;
-  background-color: #000530;
+  background-color: var(--bg-color);
   margin-block: auto;
   @media screen and (width >= 768px) {
     gap: 40px;
@@ -31,12 +31,12 @@
     row-gap: 145px;
     padding: 0px;
   }
-@media screen and (width >= 1024px) {
+  @media screen and (width >= 1024px) {
     grid-template-rows: 1fr min-content 1fr;
     row-gap: 0px;
     padding: 0;
     padding-top: 10px;
-}
+  }
 }
 
 .header__theme-menu {
@@ -112,8 +112,6 @@
   }
 }
 
-/* Реализация точки через псевдоэлементn */
-
 .rec::after {
   content: "";
   display: inline-block;
@@ -166,7 +164,7 @@
     grid-area: 2 / 1 / span 1 / span 2;
     position: relative;
     justify-self: start;
-    }
+  }
 }
 
 .title_style {
@@ -210,7 +208,6 @@
     margin-bottom: 26px;
     margin-top: 0px;
   }
-
 }
 
 /* Основной блок */
@@ -226,9 +223,11 @@
 }
 
 .section {
-  /* .content-section */
   line-height: 23.4px;
   font-style: normal;
+  font-family:
+    IBM Plex Mono,
+    sans-serif;
   @media screen and (width >= 768px) {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -247,17 +246,18 @@
       max-width: 236px;
     }
     .text_blocks {
+      margin-top: 20px;
       grid-column: 1/-1;
-      @media screen and (width >= 1024px) {
-        grid-template-columns: repeat(3, 1fr);
-    }
     }
   }
-   @media screen and (width >= 1024px) {
+  @media screen and (width >= 1024px) {
     .main_section_title {
       max-width: 315px;
     }
-   }
+    .text_blocks {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 }
 
 .text_blocks {
@@ -269,11 +269,7 @@
 }
 
 .main_section_title {
-  /* .content-section_title  */
   color: var(--main-card-text-color);
-  font-family:
-    IBM Plex Mono,
-    sans-serif;
   font-weight: 700;
   margin-bottom: 20px;
   font-size: 18px;
@@ -284,12 +280,8 @@
 
 .section_title_mini,
 .section_title {
-  /* .text-blocks_title  */
   color: var(--card-text-color);
   background-color: var(--accent-color);
-  font-family:
-    IBM Plex Mono,
-    sans-serif;
   font-size: 18px;
 }
 
@@ -299,18 +291,11 @@
 }
 
 .section_title_mini {
-  font-family:
-    IBM Plex Mono,
-    sans-serif;
   font-weight: 400;
   margin-top: 10px;
 }
 
 .section_text {
-  /* .text-blocks_content */
-  font-family:
-    IBM Plex Mono,
-    sans-serif;
   color: var(--section-text-color);
   font-size: 18px;
 }
@@ -321,23 +306,25 @@
 }
 
 .link {
+  border: 1px solid transparent;
   text-shadow: 2px 2px 2px var(--accent-color);
   text-decoration: none;
 }
 
-.link:focus-visible {
-  border: 1px solid var(--button-decorated-color-semi);
+.link:focus {
+  border: 1px solid var(--section-text-color);
 }
 
 .link:hover {
-  border-bottom: 1px solid var(--button-decorated-color);
+  border: 1px solid transparent;
+  border-bottom: 1px solid var(--section-text-color);
 }
 
 .section_img {
   @media screen and (width >= 768px) {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: min-content 1fr ;
+    grid-template-rows: min-content 1fr;
   }
 }
 
@@ -377,26 +364,14 @@
     grid-template-rows: 1fr 1fr 1fr;
     gap: 360px;
   }
-@media screen and (width >= 1024px) {
+  @media screen and (width >= 1024px) {
     gap: 0px;
-}
+  }
 }
 
 /* Планшет */
+
 @media screen and (width >= 768px) {
-
-  .article_concentration {
-    grid-area: 2 / 1 / span 1 / span 3;
-  }
-
-  .article_food {
-    grid-area: 3 / 1 / span 1 / span 3;
-  }
-
-  .article_gadgets {
-    grid-area: 4 / 1 / span 1 / span 3;
-  }
-
   .img_dawn {
     grid-area: 1 / 1 / span 1 / span 2;
     max-height: 192px;
@@ -430,20 +405,7 @@
 /* Десктоп */
 
 @media screen and (width >= 1024px) {
-  
-  .article_concentration {
-    grid-area: 2 / 1 / span 1 / span 1;
-  }
-
-  .article_food {
-    grid-area: 2 / 2 / span 1 / span 1;
-  }
-
-  .article_gadgets {
-    grid-area: 2 / 3 / span 1 / span 1;
-  }
-
-   .img_dawn {
+  .img_dawn {
     grid-area: 1 / 1 / span 1 / span 2;
     max-height: 260px;
   }

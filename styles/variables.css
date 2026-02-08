@@ -1,10 +1,10 @@
 :root {
-  --button-decorated-color:#ff0070;
-  --button-decorated-color-semi: #F1B2CE;
+  --button-decorated-color: #ff0070;
+  --button-decorated-color-semi: #f1b2ce;
   --accent-color: #ff0070;
-  --header-color: #DB00FF;
+  --header-color: #db00ff;
   --card-text-color: #353430;
-  --section-text-color: #F1B2CE;
-  --main-card-text-color:#ff0070;
-  --bg-image:url(../images/cover-image-dark.png);
+  --section-text-color: #f1b2ce;
+  --main-card-text-color: #ff0070;
+  --bg-image: url(../images/cover-image-dark.png);
 }
